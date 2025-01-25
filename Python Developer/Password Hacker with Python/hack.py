@@ -70,8 +70,15 @@ class PasswordHacker:
             with open(login_file, "r") as lf:
                 for login in lf:
                     login = login.rstrip()
-                    login_combinations = list(map(''.join, itertools.product(*({letter.upper(), letter.lower()}
-                                                                             for letter in login))))
+                    # Take each letter in login and create a tuple of the upper and lower version of the letter
+                    # Unpack and pass into itertools.product to give every possible combination of upper and lower,
+                    # Then join across the entire result to give us an object containing all possible results.
+                    # Convert to a list for easier iterable support.
+                    # Example for login = test
+                    # login_combinations = ['TEST', 'tEST', ..., 'test']
+                    login_combinations = list(map(''.join,
+                                                  itertools.product(
+                                                      *({letter.upper(), letter.lower()} for letter in login))))
                     for lc in login_combinations:
                         self.login_dict["login"] = lc
                         login_json = json.dumps(self.login_dict).encode()
