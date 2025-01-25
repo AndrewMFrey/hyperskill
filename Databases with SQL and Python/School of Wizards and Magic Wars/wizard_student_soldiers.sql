@@ -16,19 +16,19 @@ Result column shows the student's grade in the course.
 */
 
 SELECT 
-	Students.name 
+    Students.name 
 FROM   
-	Students 
+    Students 
 INNER JOIN Student_Subject 
     ON Students.student_ID = Student_Subject.student_id 
 WHERE 
-	Students.grade = 3
+    Students.grade = 3
 GROUP BY 
-	Students.name
+    Students.name
 HAVING 
-	MIN(Student_Subject.result) = 5
+    MIN(Student_Subject.result) = 5
 ORDER BY 
-	Students.name;
+    Students.name;
 
 /*
 Stage 2: Best students
@@ -47,18 +47,18 @@ The output should be in descending order of the bonus point column.
 */
 
 SELECT 
-	Students.name,
+    Students.name,
     SUM(bonus) as [bonus point]
 FROM 
-	Students
+    Students
 INNER JOIN Student_Achievement
     ON Students.student_ID = Student_Achievement.student_ID
 INNER JOIN Achievement
     ON Student_Achievement.achievement_id = Achievement.achievement_id
 GROUP BY 
-	name
+    name
 ORDER BY 
-	[bonus point] DESC
+    [bonus point] DESC
 LIMIT 4;
 
 /*
@@ -74,19 +74,19 @@ Otherwise, print below average. Order the results in alphabetical order by name.
 */
 
 SELECT 
-	name,
+    name,
     CASE 
         WHEN AVG(Student_Subject.result) > 3.5 THEN 'above average'
         ELSE 'below average'
         END AS best
 FROM 
-	Students
+    Students
 INNER JOIN Student_Subject 
     ON Students.student_id = Student_Subject.student_id 
 GROUP BY 
-	name
+    name
 ORDER BY 
-	name;
+    name;
 
 /*
 Stage 4: Time to party
@@ -102,21 +102,21 @@ The result should be in ascending order by name, with their names and which depa
 */
 
 SELECT 
-	Students.name, 
+    Students.name, 
     Department.department_name
 FROM 
-	Students
+    Students
 INNER JOIN Department
     ON Students.department_id = Department.department_id
 WHERE 
     Students.student_id IN (
-		SELECT 
-			student_id
-		FROM 
-			Student_Subject
-		GROUP BY 
-			student_id
-		HAVING 
-			AVG(result) > 4.5)
+        SELECT 
+            student_id
+        FROM 
+            Student_Subject
+        GROUP BY 
+            student_id
+        HAVING 
+            AVG(result) > 4.5)
 ORDER BY 
-	Students.name ASC;
+    Students.name ASC;
