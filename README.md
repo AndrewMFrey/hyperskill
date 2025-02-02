@@ -3,6 +3,8 @@ Code written for Hyperskill training. There are oddities imposed by the training
 
 ## Databases with SQL and Python
 
+Per Hyperskill: Explore the world of SQL and its role in retrieving, storing, and processing data, empowering you to make informed decisions and drive impactful insights.
+
 - (Medium) Coffee Machine:
   - Hyperskill description: This project allows you to get a taste of Python. Practice working with functions, challenge yourself with loops and conditions, and get more confident in Python.
   - Summary: Build a basic command line script to interact with a coffee machine with practice building functions and doing simple math.
@@ -14,6 +16,8 @@ Code written for Hyperskill training. There are oddities imposed by the training
   - Summary: Import financial data into SQLite tables and perform basic SQL functions.
 
 ## Python Developer
+
+Per Hyperskill: Acquire key skills to build a strong foundation for a career in tech. Start from the basics, deepen your understanding, perfect your code, and expand into advanced projects.
 
 - (Medium) Coffee Machine:
   - Hyperskill description: This project allows you to get a taste of Python. Practice working with functions, challenge yourself with loops and conditions, and get more confident in Python.
