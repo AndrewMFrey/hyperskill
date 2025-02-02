@@ -15,6 +15,14 @@ Per Hyperskill: Explore the world of SQL and its role in retrieving, storing, an
   - Hyperskill description: Build an investment management tool featuring a dynamic menu system. This project equips you with practical skills for handling real-world financial data.
   - Summary: Import financial data into SQLite tables and perform basic SQL functions.
 
+## Pandas for Data Analysis
+
+Per Hyperskill: Become a data analysis expert with Pandas! Learn how to use Pandas for data manipulation, analysis, and insight extraction.
+
+- (Hard) **HR Data Analysis**:
+  - Hyperskill description: This project guides you through advanced data handling and analysis using Python and pandas—from reindexing XML datasets to merging and pivoting data.
+  - Summary: Parse xml data with pandas and perform analysis on the data.
+
 ## Python Developer
 
 Per Hyperskill: Acquire key skills to build a strong foundation for a career in tech. Start from the basics, deepen your understanding, perfect your code, and expand into advanced projects.
